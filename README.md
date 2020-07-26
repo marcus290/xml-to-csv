@@ -4,7 +4,7 @@ A simple XML to CSV converter. With an XML file having the given schema, outputs
 
 Run with:
 ```
-python src/convert_to_csv.py <input filepath>
+python src/converter.py <input filepath>
 ```
 The output CSV files are written to `output_files`.
 
@@ -43,3 +43,4 @@ pytest
 - More understanding of valid input xml files and valid CSVIntervalData elements.
 - More validators on input xml files and CSVIntervalData elements.
 - More test cases.
+- Better separation of functional and unit tests
