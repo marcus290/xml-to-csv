@@ -4,11 +4,11 @@ A simple XML to CSV converter. Accepts an XML file having the given schema and o
 
 To run:
 ```
-python src/converter.py <input filepath>
+python src/converter.py <input_filepath (optional)>
 ```
-The output CSV files are written to `output_files`.
+The output CSV files are written to `output_files/`.
 
-If no filepath is given, the default `testfile.xml` will be parsed and converted instead.
+If no input filepath is given, the default `testfile.xml` will be parsed and converted instead.
 
 If more than one version of python is installed, the script is run with `python3` instead of `python`.
 
@@ -22,24 +22,28 @@ pytest
 - Design of the file structure
 - Investigate xml parser package in Python
 - Write test scenarios/cases
+
 (30 mins)
 
-- Implement solution and testing on testfile.xml, fulfilling the requirements:
+- Implement solution and testing on `testfile.xml`, fulfilling the requirements:
   - Create a CSV for each block of data that starts with 200
   - Each CSV will have the 100 row as a header, and the 900 row as the trailer
   - Each CSV will be named from the second field in the 200 row
-  - Remove leading and trailing white spaces, newlines, tabs, etc. (from CSVIntervalData text value only, not individual CSV values)
+  - Remove leading and trailing white spaces, newlines, tabs, etc. (only on the entire CSVIntervalData string, not individual CSV values)
+  
 (60 mins)
 
 - Refactoring for better structure, more maintainable and readable code.
+
 (60 mins)
 
-- Test infrastrucure and fixes to code based on tests (as needed)
+- Write test framework and fixes to code based on tests (as needed)
+
 (120 mins)
 
 
 ## What wasn't done
-- Removing leading and trailing white spaces, newlines, tabs, etc. from individual CSV values (none were found in `testfile.xml`)
+- On individual CSV values - Removing leading and trailing white spaces, newlines, tabs, etc.  (none were found in `testfile.xml`)
 - More understanding on possible valid input xml files: 
   - Can there be more than one CSVIntervalData element? 
   - Can we assume the individual CSV values are valid and don't need validation?
@@ -50,4 +54,4 @@ pytest
 - More understanding of valid input xml files and valid CSVIntervalData elements.
 - More validators on input xml files and CSVIntervalData elements.
 - More test cases.
-- Better separation of functional and unit tests
+- Better separation of functional and unit tests.
