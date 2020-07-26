@@ -30,11 +30,11 @@ def convert(filename):
             csvIntervalData_str = _get_text(node.childNodes)
 
             print("Parsing CSVIntervalData node...")
-            csv_lines = csvIntervalData_str.splitlines(keepends=True)
+            csv_lines = csvIntervalData_str.splitlines()
 
             header_found = False
             header = ""
-            TRAILER = "900\n"
+            TRAILER = "900"
 
             for i in range(len(csv_lines)):
 
