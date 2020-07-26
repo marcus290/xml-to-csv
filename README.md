@@ -23,20 +23,26 @@ pytest
 - Write test scenarios/cases
 (30 mins)
 
-- Implement solution and testing on testfile.xml
+- Implement solution and testing on testfile.xml, fulfilling the requirements:
+  - Create a CSV for each block of data that starts with 200
+  - Each CSV will have the 100 row as a header, and the 900 row as the trailer
+  - Each CSV will be named from the second field in the 200 row
+  - Remove leading and trailing white spaces, newlines, tabs, etc. (from CSVIntervalData text value only, not individual CSV values)
 (60 mins)
 
 - Refactoring for better structure, more maintainable and readable code.
 (60 mins)
 
 - Test infrastrucure and fixes to code based on tests (as needed)
-(90 mins)
+(120 mins)
 
 
 ## What wasn't done
-- More understanding on valid input xml files. 
+- Removing leading and trailing white spaces, newlines, tabs, etc. from individual CSV values (none were found in `testfile.xml`)
+- More understanding on possible valid input xml files: 
   - Can there be more than one CSVIntervalData element? 
-  - Can a CSV line start with any other number other than those in the example? 
+  - Can we assume the individual CSV values are valid and don't need validation?
+  - Can a CSV line start with any number other than 100/200/300/900? 
   - In a block of data (after 200) can there be any lines not beginning with 300?
 
 ## What would be done with more time

@@ -1,4 +1,5 @@
 from line_code import LineCode
+import os
 
 def write_data_block_to_csv(remaining_lines, header, trailer):
     """Writes the 100 header, 200 line, all 300 lines 
@@ -10,7 +11,12 @@ def write_data_block_to_csv(remaining_lines, header, trailer):
     header -- The 100 header
     trailer -- The 900 trailer
     """
-    outfilename = "output_files/" + remaining_lines[0].split(',')[1] + ".csv"
+    output_dir = "output_files"
+
+    if not os.path.exists(output_dir):
+        os.mkdir(output_dir)
+
+    outfilename =  "%s/%s.csv" % (output_dir, remaining_lines[0].split(',')[1])
 
     with open(outfilename, 'w') as o:
 
