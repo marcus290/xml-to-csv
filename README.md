@@ -1,8 +1,8 @@
 # xml-to-csv
 
-A simple XML to CSV converter. With an XML file having the given schema, outputs CSV files for each block of data.
+A simple XML to CSV converter. Accepts an XML file having the given schema and outputs CSV files in the required format for each block of data.
 
-Run with:
+To run:
 ```
 python src/converter.py <input filepath>
 ```
@@ -12,7 +12,7 @@ If no filepath is given, the default `testfile.xml` will be parsed and converted
 
 If more than one version of python is installed, the script is run with `python3` instead of `python`.
 
-Pytest is required to run the test suite, which can be installed by `pip install -U pytest`. The test suite is run with:
+Pytest is required to run the test suite, which can be installed by `pip install -U pytest`. To run the test suite:
 ```
 pytest
 ```
