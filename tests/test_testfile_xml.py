@@ -34,7 +34,7 @@ def test_testfile_xml():
 
     xml_to_csv.convert(FILEPATH)
 
-    # Check files are the same as expected output
+    # Check that the actual output files are the same as the sample solutions provided
     for i in range(len(EXPECTED_OUTPUT)):
         assert filecmp.cmp(EXPECTED_OUTPUT[i], ACTUAL_OUTPUT[i])
 

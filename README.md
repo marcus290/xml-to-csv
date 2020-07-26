@@ -12,6 +12,7 @@ If no filepath is given, the default `testfile.xml` will be parsed and converted
 
 If more than one version of python is installed, the script is run with `python3` instead of `python`.
 
+## Automated testing
 Pytest is required to run the test suite, which can be installed by `pip install -U pytest`. To run the test suite:
 ```
 pytest
