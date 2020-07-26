@@ -25,7 +25,7 @@ def _writeDataBlockToCSV(remaining_lines, header, trailer):
         for line in remaining_lines[1:]:
 
             code = LineCode(line)
-            if code.is_valid() and code == "300":
+            if code.is_valid() and code != "200" and code != "900":
                 o.write(line)
             else:
                 # Stop if the next line is anything other than a 300 line.
