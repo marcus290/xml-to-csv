@@ -1,3 +1,8 @@
+'''Convert XML to CSV data and output it to a CSV file.
+
+Functions:
+    convert(filename)
+'''
 import xml.dom.minidom
 from line_code import LineCode
 from write_to_csv import write_data_block_to_csv
@@ -12,12 +17,12 @@ def _get_text(nodelist):
     return ''.join(rc)
 
 def convert(filename):
-    """Takes the given file, parses the xml and writes 
+    '''Takes the given file, parses the XML and writes 
     the CSVIntervalData element to CSV files.
 
-    Keyword arguments:
-    filename -- the path to the xml file.
-    """
+    Parameters:
+    filename (str): the path to the input XML file.
+    '''
     with open(filename, 'r') as f:
 
         print("Parsing %s using xml.dom.minidom module..." % filename)

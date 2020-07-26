@@ -1,16 +1,22 @@
+'''Write data to a csv file.
+
+Functions:
+    write_data_block_to_csv(remaining_lines, header, trailer)
+'''
 from line_code import LineCode
 import os
 
 def write_data_block_to_csv(remaining_lines, header, trailer):
-    """Writes the 100 header, 200 line, all 300 lines 
+    '''Writes the 100 header, 200 line, all 300 lines 
     (until another code is found) and 900 trailer, 
     with a newline char after each line.
 
-    Keyword parameters:
-    remaining_lines -- Remaining lines in CSVIntervalData to check for data in this block
-    header -- The 100 header
-    trailer -- The 900 trailer
-    """
+        Parameters:
+            remaining_lines (str[]): Remaining lines in CSVIntervalData 
+                    to check for data in this block
+            header (str): The 100 header
+            trailer (str): The 900 trailer
+    '''
     output_dir = "output_files"
 
     if not os.path.exists(output_dir):
